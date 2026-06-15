@@ -26,7 +26,11 @@ SECRET_KEY = "django-insecure-_62dj-hy=$+7ep+4%=#oog+5fv_kat-b$7bc@h%*wl6_%^8l47
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+     "music-stream-ub9y.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
