@@ -1,26 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Music Stream</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#111;color:white}
-nav{display:flex;justify-content:space-between;padding:16px 32px;background:#1a1a1a}
-.hero{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#222,#111)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:30px}
-.card{background:#222;padding:20px;border-radius:12px}
-button{padding:12px 20px;border:none;border-radius:999px}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:220px;
+    height:100vh;
+    background:#1c1c1e;
+    padding:25px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.menu a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:white;
+}
+
+.main{
+    margin-left:220px;
+    padding:30px;
+}
+
+.hero{
+    height:280px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#ff375f,#7d3cff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.section-title{
+    margin-top:35px;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.album-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:20px;
+}
+
+.album{
+    background:#1c1c1e;
+    padding:15px;
+    border-radius:16px;
+}
+
+.album img{
+    width:100%;
+    border-radius:12px;
+}
+
+.album h3{
+    margin-top:10px;
+}
+
+.album p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.player{
+    position:fixed;
+    bottom:0;
+    left:220px;
+    right:0;
+    height:80px;
+    background:#1c1c1e;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+}
+
+.controls button{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    margin:0 10px;
+    cursor:pointer;
+}
 </style>
 </head>
-<body>
-    <nav>
-        <h2>Music Stream</h2>
-    </nav>
 
-    <section class="hero">
-        <h1>Welcome to Music Stream 🎵</h1>
-        <p>Your music streaming website is now online.</p>
-    </section>
+<body>
+
+<div class="sidebar">
+    <div class="logo">🎵 Music</div>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Browse</a>
+        <a href="#">Radio</a>
+        <a href="#">Library</a>
+        <a href="#">Search</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="hero">
+        <h1>Listen Now</h1>
+        <p>Millions of songs. One place.</p>
+    </div>
+
+    <h2 class="section-title">Featured Albums</h2>
+
+    <div class="album-grid">
+
+        <div class="album">
+            <img src="https://picsum.photos/300?1">
+            <h3>Night Drive</h3>
+            <p>Synthwave Collection</p>
+        </div>
+
+        <div class="album">
+            <img src="https://picsum.photos/300?2">
+            <h3>Chill Mix</h3>
+            <p>Relax & Focus</p>
+        </div>
+
+        <div class="album">
+            <img src="https://picsum.photos/300?3">
+            <h3>Top Hits</h3>
+            <p>Trending Worldwide</p>
+        </div>
+
+        <div class="album">
+            <img src="https://picsum.photos/300?4">
+            <h3>Workout</h3>
+            <p>Energy Boost</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="player">
+    <div>🎵 Night Drive</div>
+
+    <div class="controls">
+        <button>⏮</button>
+        <button>▶</button>
+        <button>⏭</button>
+    </div>
+
+    <div>2:43</div>
+</div>
+
 </body>
 </html>
